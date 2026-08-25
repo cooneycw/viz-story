@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "fingerprint": "f279b95a7b3a58a130c3a16904ea8170bc2764b43790f2403daef9e6ab330330",
+  "destination": "An interactive storytelling platform with rich visualizations where users craft and experience branching narratives.",
+  "state": "cleared",
+  "decisions": [
+    {
+      "decision_id": "d1",
+      "question": "What data model for branching narratives?",
+      "kind": "grilling",
+      "status": "resolved",
+      "blocked_by": [],
+      "resolves": "Story data model",
+      "resolution": "Stories as JSON files with nodes-and-edges graph structure. Loaded client-side.",
+      "resolved_at": "2026-08-25T20:01:19.362435+00:00"
+    },
+    {
+      "decision_id": "d2",
+      "question": "What rendering/visualization approach?",
+      "kind": "grilling",
+      "status": "resolved",
+      "blocked_by": [],
+      "resolves": "Visualization approach",
+      "resolution": "Inline SVG for story graph/branching tree view. CSS animations for transitions. Pure vanilla JS, no framework.",
+      "resolved_at": "2026-08-25T20:01:19.362435+00:00"
+    },
+    {
+      "decision_id": "d3",
+      "question": "How do users create stories?",
+      "kind": "grilling",
+      "status": "resolved",
+      "blocked_by": [],
+      "resolves": "User interaction model",
+      "resolution": "HTML-based story editor running in-browser. Exports/imports JSON.",
+      "resolved_at": "2026-08-25T20:01:19.362435+00:00"
+    },
+    {
+      "decision_id": "d4",
+      "question": "How do readers consume stories?",
+      "kind": "grilling",
+      "status": "resolved",
+      "blocked_by": [
+        "d1"
+      ],
+      "resolves": "Reader experience",
+      "resolution": "Single-page app with hash-based routing. Vanilla JS. Can be opened locally or served statically.",
+      "resolved_at": "2026-08-25T20:01:19.362435+00:00"
+    },
+    {
+      "decision_id": "d5",
+      "question": "Where do stories persist?",
+      "kind": "grilling",
+      "status": "resolved",
+      "blocked_by": [],
+      "resolves": "Persistence",
+      "resolution": "JSON files on disk / browser localStorage. No database, no server.",
+      "resolved_at": "2026-08-25T20:01:19.362435+00:00"
+    },
+    {
+      "decision_id": "d6",
+      "question": "What is the MVP scope?",
+      "kind": "task",
+      "status": "resolved",
+      "blocked_by": [
+        "d1",
+        "d2",
+        "d3"
+      ],
+      "resolves": "MVP scope",
+      "resolution": "Demo-focused MVP: story viewer with branching navigation + story graph SVG visualization + basic JSON editor. Zero dependencies.",
+      "resolved_at": "2026-08-25T20:01:19.362435+00:00"
+    }
+  ],
+  "fog": [
+    "Story data model",
+    "Visualization approach",
+    "User interaction model",
+    "Reader experience",
+    "Persistence",
+    "MVP scope"
+  ],
+  "out_of_scope": [
+    "Multi-user real-time collaboration",
+    "AI-generated story content",
+    "Mobile native apps",
+    "Monetization",
+    "Server-side rendering or backend framework"
+  ],
+  "created_at": "2026-08-25T20:01:19.362435+00:00",
+  "updated_at": "2026-08-25T20:01:19.362435+00:00"
+}

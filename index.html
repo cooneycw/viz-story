@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viz-story</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>viz-story</h1>
+        <nav>
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#reader" class="nav-link">Read</a>
+            <a href="#graph" class="nav-link">Graph</a>
+            <a href="#editor" class="nav-link">Editor</a>
+        </nav>
+    </header>
+
+    <main id="app">
+        <!-- Home screen -->
+        <section id="view-home" class="view active">
+            <div class="hero">
+                <h2>Interactive Storytelling</h2>
+                <p>Create and experience branching narratives with rich visualizations.</p>
+                <div class="story-list" id="story-list">
+                    <!-- populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Story reader -->
+        <section id="view-reader" class="view">
+            <div class="reader-container">
+                <div class="story-content" id="story-content">
+                    <h2 id="node-title"></h2>
+                    <div id="node-text"></div>
+                    <div id="node-choices" class="choices"></div>
+                </div>
+                <div class="reader-sidebar">
+                    <button id="btn-show-graph" class="btn btn-outline">View Story Graph</button>
+                    <div id="story-progress" class="progress-tracker"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story graph visualization -->
+        <section id="view-graph" class="view">
+            <div class="graph-toolbar">
+                <button id="btn-zoom-in" class="btn btn-sm">+</button>
+                <button id="btn-zoom-out" class="btn btn-sm">−</button>
+                <button id="btn-zoom-reset" class="btn btn-sm">Reset</button>
+                <span id="graph-info" class="graph-info"></span>
+            </div>
+            <div class="graph-container" id="graph-container">
+                <svg id="story-graph" xmlns="http://www.w3.org/2000/svg"></svg>
+            </div>
+        </section>
+
+        <!-- Story editor -->
+        <section id="view-editor" class="view">
+            <div class="editor-container">
+                <div class="editor-sidebar" id="editor-sidebar">
+                    <h3>Nodes</h3>
+                    <div id="node-list" class="node-list"></div>
+                    <button id="btn-add-node" class="btn btn-primary">+ Add Node</button>
+                    <hr>
+                    <button id="btn-export" class="btn btn-outline">Export JSON</button>
+                    <button id="btn-import" class="btn btn-outline">Import JSON</button>
+                    <input type="file" id="import-file" accept=".json" hidden>
+                </div>
+                <div class="editor-main" id="editor-main">
+                    <div id="node-editor" class="node-editor">
+                        <p class="placeholder">Select a node to edit, or add a new one.</p>
+                    </div>
+                </div>
+                <div class="editor-preview" id="editor-preview">
+                    <h3>Live Preview</h3>
+                    <svg id="editor-graph" xmlns="http://www.w3.org/2000/svg"></svg>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/story-engine.js"></script>
+    <script src="js/graph-renderer.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

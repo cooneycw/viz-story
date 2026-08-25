@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "The Enchanted Forest",
+    "description": "A branching adventure through a mysterious forest where ancient magic stirs and every path leads to a different fate.",
+    "author": "viz-story demo",
+    "start": "entrance"
+  },
+  "nodes": {
+    "entrance": {
+      "title": "The Forest Gate",
+      "text": "<p>A wrought-iron gate stands open beneath a canopy of silver birches, their leaves shimmering with faint luminescence. The air smells of rain and wild thyme, and somewhere deeper in the woods a bell tolls once — low and resonant.</p><p>Two paths diverge beyond the gate: one paved with pale stone, the other swallowed by ferns and shadow.</p>",
+      "type": "start",
+      "choices": [
+        { "text": "Take the pale stone path", "target": "stone-path" },
+        { "text": "Push through the ferns into shadow", "target": "fern-trail" }
+      ]
+    },
+    "stone-path": {
+      "title": "The Lantern Bridge",
+      "text": "<p>The stone path rises gently to a narrow bridge arching over a stream that glows turquoise from the mossy stones beneath. Paper lanterns hang from posts on either side, each one containing a tiny, flickering moth.</p><p>At the bridge's crest you notice a carved signpost: <em>Left — The Hollow</em>, <em>Right — The Thornfield</em>.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Cross toward The Hollow", "target": "the-hollow" },
+        { "text": "Turn right toward The Thornfield", "target": "thornfield" }
+      ]
+    },
+    "fern-trail": {
+      "title": "Whispering Ferns",
+      "text": "<p>Fronds brush your shoulders as you wade deeper, each touch leaving a cool tingle on your skin. The ferns <em>whisper</em> — not words exactly, but impressions: warmth, warning, welcome, all at once.</p><p>The trail splits around an enormous fallen oak. One way dips into a mossy ravine; the other climbs toward a faint orange glow.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Descend into the mossy ravine", "target": "ravine" },
+        { "text": "Climb toward the orange glow", "target": "fox-fire-grove" }
+      ]
+    },
+    "the-hollow": {
+      "title": "The Hollow of Echoes",
+      "text": "<p>You descend into a bowl-shaped clearing where sound behaves strangely — your footsteps arrive a half-second late, layered and choral. In the centre sits a well made of black glass, its rim engraved with spiralling runes.</p><p>A rope hangs over the edge, disappearing into darkness below. Beside the well, a staircase carved from living rock winds upward into the canopy.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Climb down the well rope", "target": "crystal-cavern" },
+        { "text": "Ascend the canopy staircase", "target": "canopy-throne" }
+      ]
+    },
+    "thornfield": {
+      "title": "The Thornfield",
+      "text": "<p>Roses taller than houses line the path, their thorns gleaming like polished steel. Petals drift down in slow spirals — crimson, violet, midnight blue — and each one that touches the ground dissolves into a wisp of perfumed smoke.</p><p>A figure wrapped in a cloak of living vines stands at the crossroads ahead, holding out two objects: a silver compass and a glass key.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Accept the silver compass", "target": "compass-path" },
+        { "text": "Accept the glass key", "target": "crystal-cavern" }
+      ]
+    },
+    "ravine": {
+      "title": "The Singing Ravine",
+      "text": "<p>Water seeps down walls of jade-green stone, each rivulet producing a clear, bell-like note. Together they form an eerie melody that makes your chest ache with a nameless longing. At the ravine's base, a shallow pool reflects not the sky but a starfield — impossibly deep.</p><p>You could wade into the pool, or follow the ravine floor downstream where the melody grows louder.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Wade into the starfield pool", "target": "starfield-pool" },
+        { "text": "Follow the melody downstream", "target": "fox-fire-grove" }
+      ]
+    },
+    "fox-fire-grove": {
+      "title": "Fox-Fire Grove",
+      "text": "<p>Dozens of pale flames hover between the trees — fox-fire, cold and blue-white, casting no shadows. In their light you see a silver fox sitting perfectly still on a flat stone, watching you with eyes like molten amber.</p><p>The fox tilts its head and two illusions bloom in the air: a vision of a sunlit glade, and a vision of an underground library whose shelves stretch into infinity.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Step into the sunlit glade vision", "target": "sunlit-glade" },
+        { "text": "Step into the underground library", "target": "crystal-cavern" }
+      ]
+    },
+    "crystal-cavern": {
+      "title": "The Crystal Cavern",
+      "text": "<p>You find yourself in a cathedral of crystal — great pillars of amethyst and quartz rising from a floor of smooth obsidian. Light has no source here; it simply <em>exists</em>, refracting through every surface in slow rainbows. A pedestal at the centre holds an open book whose pages turn by themselves.</p><p>The book's current page reads: <strong>\"Speak your name to claim the forest's gift, or close the book to leave it as you found it.\"</strong></p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Speak your name aloud", "target": "ending-guardian" },
+        { "text": "Close the book gently", "target": "ending-wanderer" }
+      ]
+    },
+    "canopy-throne": {
+      "title": "The Canopy Throne",
+      "text": "<p>Hundreds of steps later you emerge onto a platform woven from living branches, high above the forest floor. A throne of twisted oak sits at its centre, draped in moss and crowned with fireflies. The entire forest spreads below you — a sea of silver and green under a sky thick with stars.</p><p>Sitting in the throne feels like an invitation. But a rope bridge extends to another platform where a telescope points at something in the northern sky.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Sit upon the throne", "target": "ending-sovereign" },
+        { "text": "Cross to the telescope", "target": "compass-path" }
+      ]
+    },
+    "compass-path": {
+      "title": "The Compass Bearing",
+      "text": "<p>Whether by compass needle or telescope lens, the direction is the same: true north, where a column of pale light rises from the forest like a beacon. The path there is short but strange — gravity shifts, seasons flicker past in seconds, and you hear voices reciting poetry in a language you almost understand.</p><p>You arrive at a clearing where the light descends from a break in the canopy. In its centre floats a seed the size of your fist, glowing with quiet power.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Take the seed and plant it", "target": "ending-guardian" },
+        { "text": "Leave the seed and walk on", "target": "ending-wanderer" }
+      ]
+    },
+    "starfield-pool": {
+      "title": "Beneath the Stars",
+      "text": "<p>The water is warm and barely ankle-deep, yet when you look down the stars below seem miles away. Each step sends ripples across constellations. A voice — neither male nor female, neither old nor young — speaks from everywhere at once: <em>\"You have walked far enough to choose.\"</em></p><p>Two reflections appear in the water that are not your own: one wears a crown of antlers, the other carries a lantern that burns with black flame.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Reach for the antlered reflection", "target": "ending-sovereign" },
+        { "text": "Reach for the lantern-bearer", "target": "ending-keeper" }
+      ]
+    },
+    "sunlit-glade": {
+      "title": "The Sunlit Glade",
+      "text": "<p>Warm light floods over you as you step into a clearing carpeted with wildflowers — buttercups, bluebells, and something luminous that has no earthly name. Butterflies with wings like stained glass drift between the blossoms. Time feels slower here, kinder.</p><p>At the glade's edge, a moss-covered archway leads back into the forest, and a worn path leads to a cottage with smoke curling from its chimney.</p>",
+      "type": "normal",
+      "choices": [
+        { "text": "Enter the cottage", "target": "ending-keeper" },
+        { "text": "Pass through the archway", "target": "ending-wanderer" }
+      ]
+    },
+    "ending-guardian": {
+      "title": "Guardian of the Grove",
+      "text": "<p>The forest <em>answers</em>. Roots rise to meet your feet, bark armours your shoulders, and leaves weave themselves into a mantle across your back. You feel every tree, every creature, every drop of dew — the forest's heartbeat is your own now.</p><p>You are its guardian, bound to protect this place for as long as the oldest oak stands. The bell tolls again — this time, it tolls for <strong>you</strong>.</p>",
+      "type": "end",
+      "choices": []
+    },
+    "ending-wanderer": {
+      "title": "The Eternal Wanderer",
+      "text": "<p>You walk on, past the crystal cavern, past the lantern bridge, past things that have no name. The forest never ends — it simply changes, season after season, wonder after wonder. You realize you are not lost; you have merely stopped needing a destination.</p><p>Somewhere behind you the gate swings shut with a gentle click. Ahead, the path curves into mist and starlight, and you follow it <strong>gladly</strong>.</p>",
+      "type": "end",
+      "choices": []
+    },
+    "ending-sovereign": {
+      "title": "Sovereign of Stars",
+      "text": "<p>The crown settles on your brow — not heavy, but <em>vast</em>, like wearing the night sky itself. The forest bows, not in submission but in recognition. You see every path at once, every traveller who ever wandered here, every story the forest has ever told.</p><p>You are no longer in the forest. You <strong>are</strong> the forest — ancient, patient, and full of doors for those brave enough to open them.</p>",
+      "type": "end",
+      "choices": []
+    },
+    "ending-keeper": {
+      "title": "Keeper of Stories",
+      "text": "<p>The cottage is warm, the tea is ready, and the shelves are lined with leather-bound volumes — each one a story lived by someone who walked these woods before you. A quill and a blank book wait on the desk by the window.</p><p>You sit, and you begin to write. Every path you didn't take, every wonder you glimpsed in passing — you record them all, so that no story in this forest is ever truly lost.</p>",
+      "type": "end",
+      "choices": []
+    }
+  }
+}

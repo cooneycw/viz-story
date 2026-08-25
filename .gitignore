@@ -1,13 +1,22 @@
-__pycache__/
-*.py[cod]
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python venv (leftover from scaffold)
 .venv/
-dist/
-build/
-*.egg-info/
-.pytest_cache/
-.ruff_cache/
-.mypy_cache/
-.coverage
-htmlcov/
-.env
+__pycache__/
+*.pyc
+
+# Node (if someone runs npx serve)
+node_modules/
+
+# Local settings
 .claude/settings.local.json
+.env
