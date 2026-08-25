@@ -1,0 +1,29 @@
+# .claude/cicd.yml — CI/CD configuration for viz-story
+#
+# Auto-generated from claude-power-pack template.
+
+# Framework & Package Manager
+framework: python
+package_manager: uv
+
+# Build Configuration
+build:
+  required_targets:
+    - lint
+    - test
+
+  recommended_targets:
+    - format
+    - typecheck
+    - build
+    - deploy
+    - clean
+    - verify
+
+# Deployment
+deploy:
+  default_target: deploy
+  targets:
+    deploy:
+      description: "Deploy to production"
+      requires_confirmation: true
